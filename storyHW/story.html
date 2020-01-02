@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    function game(){
+        var name=prompt("歡迎進入本辯論大會，請輸入您的大名")
+        //未輸入名字
+        if(name){
+            alert(`${name}你好，歡迎加入本遊戲，準備開始你的辯論囉`);
+        }                      
+       
+            
+        else{
+            alert("您未輸入大名，你就叫台灣王吧~，歡迎進入辯論大會");
+            name="台灣王";
+        }
+        if(confirm(`${name}，準備好了嗎??`)){
+            alert("看來你已做好萬全準備，辯論大會開始");
+            if(
+                quetsion(
+                    "[問題1]=>請問你是否為有神論者??",
+                    "我愛上帝!我愛阿拉!我愛關公，我每天睡前都唸佛經呢~ 阿門!!",
+                    "無論是無神論者，還是有神論者，但我愛台灣的精神不變",
+                    true
+                )
+            )return;
+            if(
+                quetsion(
+                    "[問題2]=>你是否曾玩過魔獸世界呢??",
+                    "我熱愛魔獸世界，治國好比遊玩魔獸世界，",
+                    "哦....我只玩過PUBG",
+                    false
+                )
+            )return;
+            if(
+                quetsion(
+                    "[問題3]=>對於核四重啟有何想法",
+                    "未來我會蓋核四核五核六核七核八，滿滿的核電廠，讓我們人民遠離空氣汙染的災害",
+                    "我推動綠能能源，以核養綠，但對於核廢料的回收要做最妥當的處理",
+                    true
+                )
+            )return;
+            if(
+                quetsion(
+                    "[問題4]=>你對這次辯論會難道沒做足準備嗎，眼睛怎一直看者稿子念稿呢??",
+                    "我就是傳說中的讀稿機，備好的資料當然拿來參考的",
+                    "....我的分機為633",
+                    false
+                )
+            )return;
+            if(
+                quetsion(
+                    "[問題5]=>你愛中華民國嗎??你愛台灣嗎??",
+                    "中華民國!!萬歲~~/n中華民國!!萬歲~~/n中華民國!!萬歲~~",
+                    "我愛台灣，我選得是中華民國總統，難道我不愛中華民國!?",
+                    true
+                )
+            )return;
+            alert(`${name}，恭喜你辯論大會成功擊敗眾人，將成為中華民國總統`);
+        }
+        else{
+            alert(`準備充足資料再來與我辯論吧!`);
+        }
+    }
+    function quetsion(que,good,bad,chose){
+if(confirm(que)==chose){
+    alert(good);
+    }
+    else{
+        alert(`${bad}，辯論大會已結束，歡迎下次繼續挑戰`);
+        return true;
+    }
+    }
+    game();
+    </script>
+</body>
+</html>
